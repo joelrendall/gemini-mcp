@@ -61,7 +61,7 @@ export function registerCodeExecTool(server: McpServer): void {
         }
 
         const genAI = new GoogleGenAI({ apiKey })
-        const model = process.env.GEMINI_PRO_MODEL || 'gemini-3-pro-preview'
+        const model = process.env.GEMINI_PRO_MODEL || 'gemini-3.1-pro-preview'
 
         // Build contents with optional data
         const contents: Array<{ text: string } | { inlineData: { mimeType: string; data: string } }> = []

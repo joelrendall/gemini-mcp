@@ -67,7 +67,7 @@ export async function initGeminiClient(): Promise<void> {
     genAI = new GoogleGenAI({ apiKey })
 
     // Set up models - Gemini 3 defaults (latest preview)
-    proModelName = process.env.GEMINI_PRO_MODEL || 'gemini-3-pro-preview'
+    proModelName = process.env.GEMINI_PRO_MODEL || 'gemini-3.1-pro-preview'
     flashModelName = process.env.GEMINI_FLASH_MODEL || 'gemini-3-flash-preview'
     imageModelName = process.env.GEMINI_IMAGE_MODEL || 'gemini-3-pro-image-preview'
     videoModelName = process.env.GEMINI_VIDEO_MODEL || 'veo-2.0-generate-001'

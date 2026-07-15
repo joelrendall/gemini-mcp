@@ -147,7 +147,7 @@ export function registerImageAnalyzeTool(server: McpServer): void {
         const genAI = new GoogleGenAI({ apiKey })
         const modelName =
           model === 'pro'
-            ? process.env.GEMINI_PRO_MODEL || 'gemini-3-pro-preview'
+            ? process.env.GEMINI_PRO_MODEL || 'gemini-3.1-pro-preview'
             : process.env.GEMINI_FLASH_MODEL || 'gemini-3-flash-preview'
 
         const fileSize = fileBuffer.length

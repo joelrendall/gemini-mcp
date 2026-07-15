@@ -76,7 +76,7 @@ export function registerDocumentTool(server: McpServer): void {
         }
 
         const genAI = new GoogleGenAI({ apiKey })
-        const model = process.env.GEMINI_PRO_MODEL || 'gemini-3-pro-preview'
+        const model = process.env.GEMINI_PRO_MODEL || 'gemini-3.1-pro-preview'
 
         // Read file
         const fileBuffer = fs.readFileSync(filePath)
@@ -309,7 +309,7 @@ export function registerDocumentTool(server: McpServer): void {
         }
 
         const genAI = new GoogleGenAI({ apiKey })
-        const model = process.env.GEMINI_PRO_MODEL || 'gemini-3-pro-preview'
+        const model = process.env.GEMINI_PRO_MODEL || 'gemini-3.1-pro-preview'
 
         // Build prompt for table extraction
         let prompt: string

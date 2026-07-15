@@ -47,7 +47,7 @@ export function registerUrlContextTool(server: McpServer): void {
         }
 
         const genAI = new GoogleGenAI({ apiKey })
-        const model = process.env.GEMINI_PRO_MODEL || 'gemini-3-pro-preview'
+        const model = process.env.GEMINI_PRO_MODEL || 'gemini-3.1-pro-preview'
 
         // Build the prompt with URLs
         const urlList = urls.map((url, i) => `${i + 1}. ${url}`).join('\n')
