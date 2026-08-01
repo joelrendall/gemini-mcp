@@ -590,8 +590,7 @@ export interface DeepResearchResult {
 // Deep Research agent model. The 12-2025 preview agent is deprecated; the current
 // agents are deep-research-preview-04-2026 (speed) and deep-research-max-preview-04-2026
 // (comprehensiveness). Overridable via env so a future agent rev needs no code change.
-const DEEP_RESEARCH_AGENT =
-  process.env.GEMINI_DEEP_RESEARCH_AGENT || 'deep-research-preview-04-2026'
+const DEEP_RESEARCH_AGENT = process.env.GEMINI_DEEP_RESEARCH_AGENT || 'deep-research-preview-04-2026'
 
 /**
  * Start a deep research task

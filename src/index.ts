@@ -20,7 +20,6 @@ import { logger } from './utils/logger.js'
 // undici dispatcher so all downstream network calls (including @google/genai)
 // go through the proxy, which is essential for developers behind firewalls.
 import { createRequire } from 'node:module'
-
 ;(function setupGlobalProxy(): void {
   const proxyUrl = process.env.HTTP_PROXY || process.env.HTTPS_PROXY
   if (!proxyUrl) return
@@ -35,9 +34,7 @@ import { createRequire } from 'node:module'
     ;(globalThis as Record<symbol, unknown>)[Symbol.for('undici.globalDispatcher.1')] = dispatcher
     logger.info(`[Proxy] Detected HTTP_PROXY, global proxy agent injected.`)
   } catch (err: unknown) {
-    logger.error(
-      `[Proxy] Failed to inject proxy agent: ${err instanceof Error ? err.message : String(err)}`
-    )
+    logger.error(`[Proxy] Failed to inject proxy agent: ${err instanceof Error ? err.message : String(err)}`)
   }
 })()
 
